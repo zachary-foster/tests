@@ -13,6 +13,8 @@ input <- list(ncbi = get_uid(query),
 
 with_ids <- lapply(input, classification, return_id = TRUE)
 
+without <- lapply(input, classification)
+
 ################### content of input ###################
 # $ncbi
 # [1] "9605"
@@ -200,6 +202,146 @@ with_ids <- lapply(input, classification, return_id = TRUE)
 # 3  Mammalia   Class NHMSYS0000376154
 # 4  Primates   Order NHMSYS0000377147
 # 5 Hominidae  Family NHMSYS0000376765
+# 
+# attr(,"class")
+# [1] "classification"
+# attr(,"db")
+# [1] "nbn"
+
+
+
+
+
+################### content of without ###################
+# $ncbi
+# $`9605`
+# name         rank
+# 1    cellular organisms      no rank
+# 2             Eukaryota superkingdom
+# 3          Opisthokonta      no rank
+# 4               Metazoa      kingdom
+# 5             Eumetazoa      no rank
+# 6             Bilateria      no rank
+# 7         Deuterostomia      no rank
+# 8              Chordata       phylum
+# 9              Craniata    subphylum
+# 10           Vertebrata      no rank
+# 11        Gnathostomata      no rank
+# 12           Teleostomi      no rank
+# 13         Euteleostomi      no rank
+# 14        Sarcopterygii      no rank
+# 15 Dipnotetrapodomorpha      no rank
+# 16            Tetrapoda      no rank
+# 17              Amniota      no rank
+# 18             Mammalia        class
+# 19               Theria      no rank
+# 20             Eutheria      no rank
+# 21        Boreoeutheria      no rank
+# 22     Euarchontoglires   superorder
+# 23             Primates        order
+# 24          Haplorrhini     suborder
+# 25          Simiiformes   infraorder
+# 26           Catarrhini    parvorder
+# 27           Hominoidea  superfamily
+# 28            Hominidae       family
+# 29            Homininae    subfamily
+# 30                 Homo        genus
+# 
+# attr(,"class")
+# [1] "classification"
+# attr(,"db")
+# [1] "ncbi"
+# 
+# $itis
+# $`180091`
+# name         rank
+# 1       Animalia      Kingdom
+# 2      Bilateria   Subkingdom
+# 3  Deuterostomia Infrakingdom
+# 4       Chordata       Phylum
+# 5     Vertebrata    Subphylum
+# 6  Gnathostomata  Infraphylum
+# 7      Tetrapoda   Superclass
+# 8       Mammalia        Class
+# 9         Theria     Subclass
+# 10      Eutheria   Infraclass
+# 11      Primates        Order
+# 12   Haplorrhini     Suborder
+# 13   Simiiformes   Infraorder
+# 14    Hominoidea  Superfamily
+# 15     Hominidae       Family
+# 16     Homininae    Subfamily
+# 17          Homo        Genus
+# 
+# attr(,"class")
+# [1] "classification"
+# attr(,"db")
+# [1] "itis"
+# 
+# $eol
+# $`24937760`
+# name    rank
+# 1  Animalia kingdom
+# 2  Chordata  phylum
+# 3  Mammalia   class
+# 4  Primates   order
+# 5 Hominidae  family
+# 6      Homo   Genus
+# 
+# attr(,"class")
+# [1] "classification"
+# attr(,"db")
+# [1] "eol"
+# 
+# $col
+# $`20003018`
+# name        rank
+# 1   Animalia     Kingdom
+# 2   Chordata      Phylum
+# 3   Mammalia       Class
+# 4   Primates       Order
+# 5 Hominoidea Superfamily
+# 6  Hominidae      Family
+# 7       Homo       Genus
+# 
+# attr(,"class")
+# [1] "classification"
+# attr(,"db")
+# [1] "col"
+# 
+# $tropicos
+# $`40027340`
+# name       rank
+# 1 Equisetopsida      class
+# 2   Magnoliidae   subclass
+# 3     Asteranae superorder
+# 4      Lamiales      order
+# 5   Acanthaceae     family
+# 
+# attr(,"class")
+# [1] "classification"
+# attr(,"db")
+# [1] "tropicos"
+# 
+# $gbif
+# $`5964034`
+# name    rank
+# 1 Animalia kingdom
+# 2 Porifera  phylum
+# 
+# attr(,"class")
+# [1] "classification"
+# attr(,"db")
+# [1] "gbif"
+# 
+# $nbn
+# $NHMSYS0000376769
+# name    rank
+# 1  Animalia Kingdom
+# 2  Chordata  Phylum
+# 3  Mammalia   Class
+# 4  Primates   Order
+# 5 Hominidae  Family
 # 
 # attr(,"class")
 # [1] "classification"
